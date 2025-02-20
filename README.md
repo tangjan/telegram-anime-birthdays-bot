@@ -1,0 +1,1 @@
+A Telegram bot that sends daily anime character birthday notifications to [@AnimeBirthdays](https://t.me/AnimeBrithdays), with data sourced from [my Notion database](https://six-playground-342.notion.site/172ef38846658070a55efd42cc33c7e5).
