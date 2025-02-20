@@ -2,8 +2,6 @@ import { Client } from "@notionhq/client";
 import TelegramBot from "node-telegram-bot-api";
 // import { HttpsProxyAgent } from "https-proxy-agent";
 
-dotenv.config();
-
 // const proxyPort = process.env.PROXY_PORT || 6666;
 // const proxy = `http://127.0.0.1:${proxyPort}`;
 // const agent = new HttpsProxyAgent(proxy);
