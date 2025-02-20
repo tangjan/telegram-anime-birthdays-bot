@@ -1,0 +1,11 @@
+{
+  "name": "telegram-anime-birthdays-bot",
+  "main": "index.js",
+  "author": "jan tang",
+  "license": "MIT",
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "type": "module"
+}

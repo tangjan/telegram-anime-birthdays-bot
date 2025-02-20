@@ -1,0 +1,32 @@
+name: Anime Birthdays to Telegram
+
+on:
+  schedule:
+    - cron: '5 23 * * *'  # UTC+8
+  workflow_dispatch:    
+
+jobs:
+  send-birthday-messages:
+    runs-on: ubuntu-latest
+
+    env:
+      NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHANNEL_NAME: ${{ vars.TELEGRAM_CHANNEL_NAME }}
+      ANIME_BIRTHDAY_DATABASE_ID: ${{ vars.ANIME_BIRTHDAY_DATABASE_ID }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Send birthday messages
+        run: node scripts/index.js
